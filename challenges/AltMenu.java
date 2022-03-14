@@ -23,7 +23,7 @@ public class AltMenu {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Map<Integer, AltMenu> menu = new HashMap<>();
+        Map<Integer, AltMenu> menu = new HashMap<>(); // using Map
 
         menu.put(1, new AltMenu("Swapper", () -> IntByReference.main(null) ) );
         menu.put(2, new AltMenu("Matrix", () -> Matrix.main(null) ) );
