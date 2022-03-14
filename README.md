@@ -4,4 +4,4 @@
 
 | Team Member           | Tech Talk Notes |           Class Challenges                              | 
 | -------------------------- |-----------------------------|-----------------------------|  
-| Flora Yuan | Notes | [Menu Challenge](https://github.com/florayuan18/pikachudrinkingwindex/issues/8) |
+| Flora Yuan | [Notes](https://github.com/florayuan18/pikachudrinkingwindex/wiki/Deployment-Guide) | [Menu Challenge](https://github.com/florayuan18/pikachudrinkingwindex/issues/8) |
