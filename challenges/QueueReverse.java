@@ -8,20 +8,20 @@ public class QueueReverse {
 
     // constructor
     public QueueReverse() {
-        this.myStack = new Stack<Integer>();
+        this.myStack = new Stack<Integer>(); // allocating memory
     }
 
-    public void reverseQueue(Queue<Integer> queue1) {
-        for (Integer object : queue1) {
+    public void reverseQueue(Queue<Integer> queue1) { // taking every element of queue1 out
+        for (Integer object : queue1) { // passing element from queue1 to object
 //            System.out.println("queue === " + object);
-            myStack.push(object);
+            myStack.push(object); // object to myStack, goes in order of number 1 2 3
         }
     }
 
-    public String toString() {
+    public String toString() { // using toString to print object
         String myOutput = "";
 
-        while(!myStack.isEmpty()) {
+        while(!myStack.isEmpty()) { // if stack is not empty
             myOutput += myStack.pop() + " ";
         }
         myOutput += "\n";
@@ -41,15 +41,15 @@ public class QueueReverse {
     }
 
     public static void main(String[] args) {
-        Queue<Integer> queue1 = new LinkedList<>();
+        Queue<Integer> queue1 = new LinkedList<>(); // create the queue1
 
         QueueReverse queueReverseObj = new QueueReverse();
 
-        // creating queue1 + print
+        // creating queue1 with three elements + print original order
         queue1.add(1);
         queue1.add(2);
         queue1.add(3);
-        QueueReverse.printQueue(queue1);
+        QueueReverse.printQueue(queue1); // calling printQueue (not object, class instead)
 
         // using object to call reverseQueue function
         queueReverseObj.reverseQueue(queue1);

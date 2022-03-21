@@ -21,24 +21,22 @@ public class Queue<T> implements Iterable<T> {
         System.out.println("Enqueued data: " + data);
     }
 
-    // Method to remove an key from queue.
+    // delete method
     public void delete()
     {
-        // If queue is empty, return NULL.
+        // if queue is empty, return NULL.
         if (this.head == null)
             return;
 
         System.out.println("Dequeued data: " + head.getData());
 
-        // Store previous front and move front one node ahead
+        // store previous head and move head one node ahead
         LinkedList<T> temp = this.head;
         this.head = this.head.getNext();
 
-        // If front becomes NULL, then change rear also as NULL
+        // if head becomes NULL, then change tail also as NULL
         if (this.head == null)
             this.tail = null;
-
-
     }
 
     /**
@@ -145,7 +143,7 @@ class QueueManager<T> {
      */
     public void deleteList()
     {
-        while (this.queue.head != null) {
+        while (this.queue.head != null) { // if the queue head exists
             this.queue.delete();
 
             this.count--;
@@ -161,7 +159,7 @@ class QueueManager<T> {
 //        System.out.println(this.name + " count: " + count);
 //        System.out.print(this.name + " data: ");
 
-        System.out.print(this.name + " count: " + this.count + ", data: ");
+        System.out.print(this.name + " count: " + this.count + ", data: "); // printing in the desired format
 
         if (this.count == 0) {
             System.out.print("null");
@@ -176,7 +174,6 @@ class QueueManager<T> {
 }
 
 /**
- * Driver Class
  * Tests queue with string, integers, and mixes of Classes and types
  */
 class QueueTester {

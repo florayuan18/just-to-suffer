@@ -11,7 +11,7 @@ class QueueMerge {
     }
 
     public Queue<Integer> mergeTwoQueue(Queue<Integer> queue1, Queue<Integer> queue2) {
-        Integer myLength = queue1.size();
+        Integer myLength = queue1.size(); // setting myLength to queue's size
 
         Integer element1 = -1;
         Integer element2 = -1;
@@ -20,21 +20,21 @@ class QueueMerge {
             element1 = queue1.poll();
             element2 = queue2.poll();
 
-            if (element1 != null && element2 != null) {
-                if (element1 < element2) {
-                    mergedQueue.add(element1);
+            if (element1 != null && element2 != null) { // conditions for if both elements are not null
+                if (element1 < element2) { // element in first queue is smaller than the element in the second queue
+                    mergedQueue.add(element1); // first element added first in this case
                     mergedQueue.add(element2);
                 }
-                else {
-                    mergedQueue.add(element2);
+                else { // if the above does not occur
+                    mergedQueue.add(element2); // second element added first in this case
                     mergedQueue.add(element1);
                 }
             }
-            else if (element1 == null && element2 != null) {
-                mergedQueue.add(element2);
+            else if (element1 == null && element2 != null) { // if there are no more elements in queue1
+                mergedQueue.add(element2); // take from second queue
             }
-            else if (element1 != null && element2 == null) {
-                mergedQueue.add(element1);
+            else if (element1 != null && element2 == null) { // if there are no more elements in queue2
+                mergedQueue.add(element1); // take from first queue
             }
             else {
                 continue;
@@ -43,7 +43,7 @@ class QueueMerge {
         return mergedQueue;
     }
 
-    public String toString() {
+    public String toString() { // using toString to print object
         String myOutput = "";
         Integer myQueueLength = mergedQueue.size();
         Integer count = 0;
@@ -51,10 +51,10 @@ class QueueMerge {
         for (Integer object : mergedQueue) {
             count++;
             if (count < mergedQueue.size()) {
-                myOutput += object + " -> ";
+                myOutput += object + " -> "; // printing with the desired arrow format
             }
             else {
-                myOutput += object + " -> nil";
+                myOutput += object + " -> nil"; // printing with the desired arrow format & nil
             }
         }
         myOutput += "\n";
