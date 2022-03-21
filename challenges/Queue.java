@@ -148,9 +148,8 @@ class QueueManager<T> {
         while (this.queue.head != null) {
             this.queue.delete();
 
-
-                this.count--;
-                this.printQueue();
+            this.count--;
+            this.printQueue();
 
         }
     }
@@ -189,13 +188,11 @@ class QueueTester {
         //qWords.printQueue();
 
 
-
-
-
 //        // Create iterable Queue of Integers
 //        Object[] numbers = new Integer[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 //        QueueManager qNums = new QueueManager("Integers", numbers );
 //        qNums.printQueue();
+
 //
 //        // Create iterable Queue of NCS Generics
 //        Animal.setOrder(Animal.KeyType.name);

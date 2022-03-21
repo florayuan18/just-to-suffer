@@ -1,7 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.concurrent.RunnableFuture;
 
 public class AltMenu {
     private String title; // numerical
@@ -32,6 +31,8 @@ public class AltMenu {
         // menu.put is creating a new element,
         menu.put(1, new AltMenu("Swapper", () -> IntByReference.main(null) ) ); // options for the user to pick from
         menu.put(2, new AltMenu("Matrix", () -> Matrix.main(null) ) ); // 2 is key, making a new class object
+        menu.put(3, new AltMenu("Queue Iterator", () -> QueueTester.main(null) ) );
+        menu.put(4, new AltMenu("Merge Queues", () -> QueueMerge.main(null) ) );
 
         System.out.println("Menu:");
         // Map.Entry - access entries within a map
