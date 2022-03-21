@@ -33,6 +33,7 @@ public class AltMenu {
         menu.put(2, new AltMenu("Matrix", () -> Matrix.main(null) ) ); // 2 is key, making a new class object
         menu.put(3, new AltMenu("Queue Iterator", () -> QueueTester.main(null) ) );
         menu.put(4, new AltMenu("Merge Queues", () -> QueueMerge.main(null) ) );
+        menu.put(5, new AltMenu("Reverse Queues", () -> QueueReverse.main(null) ) );
 
         System.out.println("Menu:");
         // Map.Entry - access entries within a map
