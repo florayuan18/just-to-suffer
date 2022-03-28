@@ -1,3 +1,5 @@
+package LinkedLists;
+
 public class LinkedList<T>
 {
     private T data;
