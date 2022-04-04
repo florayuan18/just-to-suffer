@@ -3,12 +3,14 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class SelectionSort {
+public class SelectionSort extends Sorts {
     private final ArrayList<Integer> data = new ArrayList<>();
     private final Duration timeElapsed;
 
     // constructor
     public SelectionSort(int size) {
+        super(size);
+
         Instant start = Instant.now();  // time capture -- start
         // build an array
         for (int i = 0; i < size; i++) {

@@ -3,12 +3,14 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class InsertionSort {
+public class InsertionSort extends Sorts {
     private final ArrayList<Integer> data = new ArrayList<>();
     private final Duration timeElapsed;
 
     // constructor
     public InsertionSort(int size) {
+        super(size);
+
         Instant start = Instant.now();  // time capture -- start
         // build an array
         for (int i = 0; i < size; i++) {
